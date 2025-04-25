@@ -6,43 +6,136 @@
 }
 
 body{
-    background-color: black;
+    
+    padding-bottom: 75px; /* hoặc bằng chiều cao thanh cart */
 }
 
-/* Desktop view: chỉ hiển thị khi màn hình >= 768px */
-@media (min-width: 768px) {
-    .web-view {
-    display: block;
-    }
-    .mobile-view {
-    display: none;
-}
-}
-
-.web-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Chiều cao toàn bộ màn hình */
-  background-color: #333; /* Để có màu nền tối nếu cần */
-  color: white; /* Đổi màu chữ thành trắng */
-  text-align: center; /* Căn giữa văn bản */
+/* Định vị nút chuyển chế độ ngang với section */
+.mode-toggle-btn {
+  position: fixed; /* Đặt nút vào vị trí tuyệt đối */
+  top: 10px; /* Cách mép trên của cửa sổ */
+  right: 10px; /* Cách mép phải của cửa sổ */
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
 }
 
-.web-view h2{
-  font-size: 24px;
-  line-height: 1.5;
-  margin: 0; /* Loại bỏ margin mặc định */
+/* Khi chuyển sang chế độ sáng */
+.light-mode .mode-toggle-btn {
+  background-color: black;
+  color: white; /* Màu nền cho chế độ sáng */
 }
 
-/* Mobile view: chỉ hiển thị khi màn hình < 768px */
-@media (max-width: 767px) {
-        .web-view {
-        display: none !important; /* Đảm bảo bị ẩn */
-    }
-        .mobile-view {
-        display: block !important; /* Hiển thị mobile layout */
-    }
+.light-mode .mobile-view .header{
+  background-color: white;
+}
+
+  .light-mode .mobile-view .header .header-return,
+  .light-mode .mobile-view .header .header-share,
+  .light-mode .mobile-view .header .header-cart,
+  .light-mode .mobile-view .header .header-search i,
+  .light-mode .mobile-view .header .header-report {
+    color: black;
+  }
+
+  .light-mode .mobile-view .header .header-search input{
+    background-color: #f1f1f1;
+  }
+
+  .light-mode hr{
+    color: black;
+  }
+
+  .light-mode .info-products{
+    background-color: white;
+  }
+
+  .light-mode .name-products .name,
+  .light-mode .rate-products {
+    color: black;
+  }
+
+  .light-mode .ship-time .ship-top i,
+  .light-mode .ship-time .ship-bottom .shipping-fee,
+  .light-mode .ship-time .ship-top .ship-guarantee{
+    color: #000;
+  }
+
+  .light-mode .return-products{
+    color: #000;
+  }
+
+
+  .light-mode .more-info-products{
+    background-color: white;
+  }
+
+  .light-mode .more-info-products .description-products,
+  .light-mode .more-info-products .description-products .detail-row .label{
+    color: black;
+  }
+
+  .light-mode .reviews{
+    background-color: white;
+  }
+
+  .light-mode .reviews .customer-start{
+    color: black;
+  }
+
+  .light-mode .start-count,
+  .light-mode .start-number {
+    color: black;
+  }
+
+  .light-mode .customer-cmt .info-customer .name-customer{
+    color: black;
+  }
+
+  .light-mode .more-products{
+    background-color: #f9f9f9;
+  }
+
+  .light-mode .more-products-title p{
+    color: black;
+  }
+
+  .light-mode .more-products-list .more-products-btn{
+    background-color: white;
+  }
+
+  .light-mode .more-products-list .more-products-btn .more-products-btn-name{
+    color: black;
+  }
+
+  .light-mode .more-products-list .more-products-btn .more-products-btn-sold {
+    color: black;
+  }
+
+  .light-mode .add-buy-cart{
+    background-color: white;
+  }
+
+  .light-mode .add-buy-cart .icon-button{
+    color: black;
+  }
+
+  .light-mode .center-section{
+    background-color: #e5e5e3;
+  }
+
+  /* light mode end */
+
+.center-section{
+  width: 500px;
+  background-color: black;
+  margin: 0 auto;
 }
 
 /* Mobile Header */
@@ -531,9 +624,72 @@ body{
     margin-bottom: 0rem;
   }
   
-  
+/* add to cart */
+  .add-buy-cart {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    height: 80px;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 5%;
+}
 
-  
-  
-  
-  
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.icon-button i {
+    font-size: 18px;
+}
+
+.chat-button {
+    margin-right: 12px;
+}
+
+.add-to-cart {
+    background-color: #313131;
+    color: white;
+    padding: 10px;
+    width: 0; /* Khởi tạo width bằng 0 */
+    flex-grow: 1; /* Cho phép phần tử này giãn rộng */
+    min-width: 140px; /* Đảm bảo chiều rộng tối thiểu */
+    max-width: 200px; /* Giới hạn chiều rộng tối đa */
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Không cho phép chữ xuống dòng */
+    overflow: hidden; /* Ẩn phần chữ thừa nếu có */
+    text-overflow: ellipsis; /* Hiển thị "..." nếu chữ quá dài */
+}
+
+.add-to-cart.buy-now {
+    background-color: #fe2b54;
+}
+
+.add-to-cart:hover,
+.icon-button:hover {
+    opacity: 0.9;
+}
+
+.add-buy-cart p {
+    margin: 0;
+}

@@ -11,14 +11,9 @@
 </head>
 <body>
 
-  <!-- Giao diện desktop -->
-  <section class="center-section web-view">
-    <div>
-      <h2>Đây là giao diện desktop <br>
-        Vui lòng chuyển sang giao diện mobile
-      </h2>
-    </div>
-  </section>    
+  <!-- light mode -->
+  <button id="mode-toggle" class="mode-toggle-btn" onclick="toggleMode()">Chế độ sáng</button>
+
 
   <!-- Giao diện mobile -->
   <section class="center-section mobile-view">
@@ -375,8 +370,30 @@
     </div>
     
     
+    <div class="add-buy-cart">
+      <button class="icon-button">
+          <i class="fa-solid fa-shop"></i>
+          <p>Shop</p>
+      </button>
+    
+      <button class="icon-button chat-button">
+          <i class="fa-solid fa-comment"></i>
+          <p>Chat</p>
+      </button>
+    
+      <button class="add-to-cart">
+          Thêm vào giỏ
+      </button>
+    
+      <button class="add-to-cart buy-now">
+          Mua Ngay
+      </button>
+  </div>
+  
+    
   </section>  
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/light-night-mode.js"></script>
 </body>
 </html>
