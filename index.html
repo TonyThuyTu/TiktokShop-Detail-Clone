@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Shop Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="scss/index.css">
+</head>
+<body>
+
+  <!-- Giao diện desktop -->
+  <section class="center-section web-view">
+    <div>
+      <h2>Đây là giao diện desktop <br>
+        Vui lòng chuyển sang giao diện mobile
+      </h2>
+    </div>
+  </section>    
+
+  <!-- Giao diện mobile -->
+  <section class="center-section mobile-view">
+    <!-- header -->
+    <div class="mobile-view">
+      <div class="header">
+        <div class="header-return"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="header-search">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Tìm kiếm">
+        </div>
+        
+        <div class="header-share"><i class="fa-solid fa-share"></i></div>
+        <div class="header-cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class="header-report"><i class="fa-solid fa-ellipsis"></i></div>
+      </div>
+    </div>
+    
+    <!-- image products -->
+    <div id="productCarousel" class="carousel slide mobile-view" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/32q6ue9b_dd64156f5869455da6d4172.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/ci9f8k75_e9e8bebbbb164f648e7bf94.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/d3awpu8q_57e067c744cb404180328a9.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/i56gu2q2_c08bcc730eb04dcd8b79572.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    
+      <!-- Dấu mũi tên điều hướng -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    
+    <div class="info-products">
+      <!-- price -->
+    <div class="price-products">
+      <span class="fix-price">4.699.030đ</span>
+      <i class="fa-solid fa-tag"></i>
+      <del>7.190.000đ</del>
+      <div class="sale">-35%</div>
+    </div>
+    
+    <!-- discount -->
+    <div class="discount-products">
+      <span class="discount">Giảm thêm 10%</span>
+      <span class="discount">Giảm thêm 5%</span>
+    </div>
+
+    <!-- Name products -->
+    <div class="name-products">
+      <p class="name">Razer Viper V3 Pro | Chính hãng và bảo hành tại Việt Nam | FPT Software...</p>
+      <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <!-- Rate Start -->
+    <div class="rate-products">
+      <i class="fa-solid fa-star"></i>
+      <p>5.0</p>
+      <p class="review-count" style="color: #5fb1fc;">(11)</p>
+      <p class="sold-count">Đã bán: 200</p>
+    </div>
+    
+    <hr>
+    <!-- Ship -->
+    <div class="ship-time">
+      <div class="ship-top">
+        <i class="fa-solid fa-truck"></i>
+        <span class="ship-badge">Giao hàng miễn phí</span>
+        <span class="ship-guarantee">Ngày nhận hàng 22 -23 tháng 4</span>
+      </div>
+      <div class="ship-bottom">
+        <span class="shipping-fee">Phí giao hàng: <del>168.900đ</del></span>
+      </div>
+    </div>
+    <hr>
+    <!-- Return -->
+    <div class="return-products">
+      <i class="fa-solid fa-check"></i>
+      <span class="return-badge">Đổi trả miễn phí trong 7 ngày</span>
+    </div>
+
+    </div>
+    
+    <div class="more-info-products">
+
+      <!-- Description products -->
+      <div class="description-products">
+        <p>Thông tin sản phẩm</p>
+        <p class="details">Chi tiết</p>
+
+        <div class="detail-row">
+          <span class="label">Thời hạn bảo hành</span>
+          <span class="value">24 tháng</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Loại kết nối</span>
+          <span class="value">Không dây</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Dành cho Trò chơi</span>
+          <span class="value">Có</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Bảo hành</span>
+          <span class="value">Bảo hàng nhà cung cấp</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Hãng</span>
+          <span class="value">Razer</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Trọng lượng</span>
+          <span class="value">54gr</span>
+        </div>
+
+        <p class="details" style="margin-top: 0.5rem;">Mô tả</p>
+
+        <div class="description-row">
+          <img src="assets/2211_thiet-ke-chuot-Razer-Viper.png" alt="">
+          <p class="description-text">Nói đến Chuột không dây Razer Viper V3 Pro - Trắng (RZ01-05120200-R3A1) thì đây là chuột chơi game thế hệ mới nhất 
+          và đặc biệt cảm biến Razer Focus Pro Gen 2 Optical Sensor chính xác nhất mang lại sự hài lòng tuyệt đối cho các game thủ.</p>
+          <img src="assets/design-large.png" alt="">
+          <p class="description-text">Chuột Razer Viper V3 Pro có thời lượng pin lên đến 95 tiếng, thoải mái sử dụng trong thời gian dài. 
+          Đồng thời, bạn chỉ cần sạc 2 giờ đồng hồ cho chuột gaming này để có thể tiếp tục sử dụng tiếp tục. </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- review -->
+    <div class="reviews">
+      <p class="customer-start">Đánh giá sản phẩm</p>
+      <div class="start-rate">
+        <p class="start-count">
+          <span class="start-number">5.0</span> /5
+        </p>
+        <div class="start-icon">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      
+      <!-- cmt 1 -->
+      <div class="customer-cmt">
+        <div class="info-customer">
+          <img src="assets/stylish-spectacles-guy-3d-avatar.png" alt="">
+          <p class="name-customer">John Cena</p>
+        </div>
+        <div class="start-icon-customer">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="cmt">
+          <p class="cmt-text">Very Good</p>
+        </div>
+        <div class="customer-img-products">
+          <img src="assets/viper-v3-pro-v0-lsktl6t24hvc1.png" alt="">
+          <img src="assets/viper-v3-pro-v0-z309qkzn0hwc1.png" alt="">
+        </div>
+      </div>  
+      
+      <!-- cmt 2 -->
+      <div class="customer-cmt">
+        <div class="info-customer">
+          <img src="assets/stylish-spectacles-guy-3d-avatar.png" alt="">
+          <p class="name-customer">John Cena</p>
+        </div>
+        <div class="start-icon-customer">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="cmt">
+          <p class="cmt-text">Very Good</p>
+        </div>
+        <div class="customer-img-products">
+          <img src="assets/viper-v3-pro-v0-lsktl6t24hvc1.png" alt="">
+          <img src="assets/viper-v3-pro-v0-z309qkzn0hwc1.png" alt="">
+        </div>
+      </div> 
+
+      <!-- cmt 3 -->
+      <div class="customer-cmt">
+        <div class="info-customer">
+          <img src="assets/stylish-spectacles-guy-3d-avatar.png" alt="">
+          <p class="name-customer">John Cena</p>
+        </div>
+        <div class="start-icon-customer">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="cmt">
+          <p class="cmt-text">Very Good</p>
+        </div>
+        <div class="customer-img-products">
+          <img src="assets/viper-v3-pro-v0-lsktl6t24hvc1.png" alt="">
+          <img src="assets/viper-v3-pro-v0-z309qkzn0hwc1.png" alt="">
+        </div>
+      </div> 
+    </div>
+
+    <div class="more-products">
+      <div class="more-products-title">
+        <p>Các sản phẩm liên quan</p>
+      </div>
+    
+      <div class="more-products-list">
+
+        <div class="more-products-btn">
+          <img src="assets/logitech pro x tkl rapid.png" alt="">
+          <p class="more-products-btn-name">Bàn phím chơi game Logitech Pro x TKL Rapid</p>
+          <div class="more-products-btn-price">
+            <p class="more-products-btn-sale-price">2.500.000đ</p>
+            <p class="more-products-btn-fix-price"><del>5.000.000đ</del></p>
+          </div>
+          <div class="more-products-tag">
+            <div class="more-products-tag-free-ship">
+              <i class="fa-solid fa-truck"></i>
+              <p>Free Shipping</p>
+            </div>
+            <div class="more-products-tag-discount">
+              <p>10% Off</p>
+            </div>
+          </div>
+          <p class="more-products-btn-sold">Đã bán: 70</p>
+        </div>
+    
+        <!-- Có thể thêm nhiều .more-products-btn nữa -->
+
+        <div class="more-products-btn">
+          <img src="assets/logitech pro x tkl rapid.png" alt="">
+          <p class="more-products-btn-name">Bàn phím chơi game Logitech Pro x TKL Rapid</p>
+          <div class="more-products-btn-price">
+            <p class="more-products-btn-sale-price">2.500.000đ</p>
+            <p class="more-products-btn-fix-price"><del>5.000.000đ</del></p>
+          </div>
+          <div class="more-products-tag">
+            <div class="more-products-tag-free-ship">
+              <i class="fa-solid fa-truck"></i>
+              <p>Free Shipping</p>
+            </div>
+            <div class="more-products-tag-discount">
+              <p>10% Off</p>
+            </div>
+          </div>
+          <p class="more-products-btn-sold">Đã bán: 70</p>
+        </div>
+
+        <div class="more-products-btn">
+          <img src="assets/logitech pro x tkl rapid.png" alt="">
+          <p class="more-products-btn-name">Bàn phím chơi game Logitech Pro x TKL Rapid</p>
+          <div class="more-products-btn-price">
+            <p class="more-products-btn-sale-price">2.500.000đ</p>
+            <p class="more-products-btn-fix-price"><del>5.000.000đ</del></p>
+          </div>
+          <div class="more-products-tag">
+            <div class="more-products-tag-free-ship">
+              <i class="fa-solid fa-truck"></i>
+              <p>Free Shipping</p>
+            </div>
+            <div class="more-products-tag-discount">
+              <p>10% Off</p>
+            </div>
+          </div>
+          <p class="more-products-btn-sold">Đã bán: 70</p>
+        </div>
+
+        <div class="more-products-btn">
+          <img src="assets/logitech pro x tkl rapid.png" alt="">
+          <p class="more-products-btn-name">Bàn phím chơi game Logitech Pro x TKL Rapid</p>
+          <div class="more-products-btn-price">
+            <p class="more-products-btn-sale-price">2.500.000đ</p>
+            <p class="more-products-btn-fix-price"><del>5.000.000đ</del></p>
+          </div>
+          <div class="more-products-tag">
+            <div class="more-products-tag-free-ship">
+              <i class="fa-solid fa-truck"></i>
+              <p>Free Shipping</p>
+            </div>
+            <div class="more-products-tag-discount">
+              <p>10% Off</p>
+            </div>
+          </div>
+          <p class="more-products-btn-sold">Đã bán: 70</p>
+        </div>
+
+        <div class="more-products-btn">
+          <img src="assets/logitech pro x tkl rapid.png" alt="">
+          <p class="more-products-btn-name">Bàn phím chơi game Logitech Pro x TKL Rapid</p>
+          <div class="more-products-btn-price">
+            <p class="more-products-btn-sale-price">2.500.000đ</p>
+            <p class="more-products-btn-fix-price"><del>5.000.000đ</del></p>
+          </div>
+          <div class="more-products-tag">
+            <div class="more-products-tag-free-ship">
+              <i class="fa-solid fa-truck"></i>
+              <p>Free Shipping</p>
+            </div>
+            <div class="more-products-tag-discount">
+              <p>10% Off</p>
+            </div>
+          </div>
+          <p class="more-products-btn-sold">Đã bán: 70</p>
+        </div>
+
+        <div class="more-products-btn">
+          <img src="assets/logitech pro x tkl rapid.png" alt="">
+          <p class="more-products-btn-name">Bàn phím chơi game Logitech Pro x TKL Rapid</p>
+          <div class="more-products-btn-price">
+            <p class="more-products-btn-sale-price">2.500.000đ</p>
+            <p class="more-products-btn-fix-price"><del>5.000.000đ</del></p>
+          </div>
+          <div class="more-products-tag">
+            <div class="more-products-tag-free-ship">
+              <i class="fa-solid fa-truck"></i>
+              <p>Free Shipping</p>
+            </div>
+            <div class="more-products-tag-discount">
+              <p>10% Off</p>
+            </div>
+          </div>
+          <p class="more-products-btn-sold">Đã bán: 70</p>
+        </div>
+
+      </div>
+    </div>
+    
+    
+  </section>  
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
